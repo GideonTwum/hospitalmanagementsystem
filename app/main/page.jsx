@@ -44,9 +44,9 @@ const page = () => {
           <p className='text-[13px] ml-[45px]'>Dashboard</p>
         </div>
 
-        <div  onClick={() => assignActivePage('appointments')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
+        {/* <div  onClick={() => assignActivePage('appointments')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Appointments</p>
-        </div>
+        </div> */}
 
         <div  onClick={() => assignActivePage('doctors')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Doctors</p>
@@ -64,6 +64,7 @@ const page = () => {
         <div  onClick={() => assignActivePage('help')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Help</p>
         </div>
+
       </div>
     </div>
 

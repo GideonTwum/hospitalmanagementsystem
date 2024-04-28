@@ -11,7 +11,7 @@ const Nav = () => {
             <input type="text" placeholder='Search...' className='text-[13px] p-2 rounded-[30px] w-[30vw] outline-none border-none ' />
             < SearchIcon  className='text-gray-300 cursor-pointer'/>
           </div>
-          <div className='flex  items-center gap-5 '>
+          <div className='flex  items-center gap-3 '>
             <NotificationsNoneIcon className='cursor-pointer'/>
             <div className='flex '>
             <p className='cursor-pointer'>Dr. Nana K</p>

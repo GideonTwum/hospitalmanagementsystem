@@ -17,7 +17,7 @@ const Login = () => {
 
   return (
 
-    <div className='flex items-center justify-center gap-[30px] ml-[20rem] mt-[3rem] '>
+    <div className='flex items-center justify-center gap-[30px] ml-[20rem] mt-[3rem]  '>
       <div>
           <Image 
           height={300}
@@ -44,11 +44,11 @@ const Login = () => {
               </div>
           </form>
           <div onClick={() => toMainPage()}>
-          <button  className='bg-[dodgerblue] hover:bg-[#4482d4] mt-[20px] text-[13px] p-2 w-[16vw] text-white rounded-[10px]'>{isLoading?'Loading....' : 'Login'}</button>
+          <button  className='bg-[dodgerblue] hover:bg-[#4482d4] mt-[20px] text-[13px] items-center flex justify-center p-2 w-[16vw] text-white rounded-[10px]'>{isLoading? <img className='h-[3vh] ' src='/loading.gif' alt='loading' /> : 'Login'}</button>
           </div>
            
             <div className='flex gap-[5px]'>
-              <p className='text-[13px]'>Are you a new Admin?</p>
+              <p className='text-[13px]'>Are you a new Admin?</p> 
               <p className='text-[dodgerblue] text-[13px] cursor-pointer'>Sign up</p>
             </div>
         </div>
