@@ -39,3 +39,31 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.emergency{
+  background-image:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/hospitalward.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.surgical{
+  background-image:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/surgery.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.care{
+  background-image:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/care.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.labor{
+  background-image:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/Labor.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

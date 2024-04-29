@@ -15,6 +15,10 @@ const page = () => {
         setActivePage(getValue);
     }
 
+    const logout = () => {
+      window.location.href = "../Login"; 
+    }
+
     const renderPages = () => {
         switch(activePage){
             case 'dashboard':
@@ -36,7 +40,10 @@ const page = () => {
   return (
     <div className='flex bg-[#F9FAFD]  '>
          <div className='flex flex-col bg-white h-[100vh] w-[27vw] items-center gap-[20px]  '>
-      <div className='mt-5'>
+      <div className='mt-5 flex items-center gap-2'>
+        <div className='bg-[dodgerblue] w-[fit-content] rounded-[10px]  p-2'>
+          <h1 className='text-white font-bold'>H</h1>
+        </div>
         <h1 className='font-bold'>HOSPITAL</h1>
       </div>
       <div className='flex flex-col gap-6 mt-10'>
@@ -63,6 +70,9 @@ const page = () => {
         </div>
         <div  onClick={() => assignActivePage('help')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Help</p>
+        </div>
+        <div onClick={() => logout()}>
+          <button className='bg-[dodgerblue] p-2 text-[12px] text-white w-[15vw] rounded-[7px]'>logout</button>
         </div>
 
       </div>
