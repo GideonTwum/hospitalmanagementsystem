@@ -10,7 +10,7 @@ export default function Home() {
 
 
   return (
-    <main className="flex min-h-screen  bg-gray-100 body">
+    <main className="flex min-h-screen items-center justify-center body">
       <div>
           <Login />
       </div>

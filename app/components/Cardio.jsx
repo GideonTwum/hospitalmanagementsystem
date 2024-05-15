@@ -17,7 +17,7 @@ const Cardio = () => {
             height={250}
             width={200}
             alt='a young doctor'
-            src='/doc.jpg'
+            src='/fdoc.jpg'
             />
         </div>
         <div className='h-[30vh] w-[18vw]'>
@@ -25,7 +25,7 @@ const Cardio = () => {
             height={250}
             width={200}
             alt='a young doctor'
-            src='/doc.jpg'
+            src='/Mdoc.jpg'
             />
         </div>
       

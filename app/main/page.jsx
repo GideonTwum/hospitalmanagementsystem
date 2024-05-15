@@ -16,7 +16,7 @@ const page = () => {
     }
 
     const logout = () => {
-      window.location.href = "../Login"; 
+      window.location.href= "/"; 
     }
 
     const renderPages = () => {
@@ -39,14 +39,14 @@ const page = () => {
     }
   return (
     <div className='flex bg-[#F9FAFD]  '>
-         <div className='flex flex-col bg-white h-[100vh] w-[27vw] items-center gap-[20px]  '>
-      <div className='mt-5 flex items-center gap-2'>
+         <div className='flex flex-col bg-white h-[100vh] w-[30vw] items-center gap-[2rem]  '>
+      <div className=' mt-[2rem] flex items-center gap-2'>
         <div className='bg-[dodgerblue] w-[fit-content] rounded-[10px]  p-2'>
           <h1 className='text-white font-bold'>H</h1>
         </div>
         <h1 className='font-bold'>HOSPITAL</h1>
       </div>
-      <div className='flex flex-col gap-6 mt-10'>
+      <div className='flex flex-col gap-[1.5rem] mt-10'>
         <div onClick={() => assignActivePage('dashboard')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section  hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Dashboard</p>
         </div>
@@ -80,7 +80,7 @@ const page = () => {
 
     <div className='flex flex-col'>
         <Nav />
-        <div className='p-10'>
+        <div className='p-8'>
             {renderPages()}
         </div>
     </div>

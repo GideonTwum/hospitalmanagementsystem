@@ -9,7 +9,7 @@ const Optometrist = () => {
             height={250}
             width={200}
             alt='a young doctor'
-            src='/doc.jpg'
+            src='/Mdoc.jpg'
             />
         </div>
         <div className='h-[30vh] w-[18vw]'>
@@ -17,7 +17,7 @@ const Optometrist = () => {
             height={250}
             width={200}
             alt='a young doctor'
-            src='/doc.jpg'
+            src='/Ydoc.jpg'
             />
         </div>
         <div className='h-[30vh] w-[18vw]'>
