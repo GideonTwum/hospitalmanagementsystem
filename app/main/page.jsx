@@ -47,7 +47,7 @@ const page = () => {
         <h1 className='font-bold'>HOSPITAL</h1>
       </div>
       <div className='flex flex-col gap-[1.5rem] mt-10'>
-        <div onClick={() => assignActivePage('dashboard')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section  hover:ml-[25px] '>
+        <div onClick={() => assignActivePage('dashboard')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section  hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Dashboard</p>
         </div>
 
@@ -55,20 +55,20 @@ const page = () => {
           <p className='text-[13px] ml-[45px]'>Appointments</p>
         </div> */}
 
-        <div  onClick={() => assignActivePage('doctors')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
+        <div  onClick={() => assignActivePage('doctors')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Doctors</p>
         </div>
 
-        <div  onClick={() => assignActivePage('departments')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
+        <div  onClick={() => assignActivePage('departments')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Departments</p>
         </div>
-        <div  onClick={() => assignActivePage('patients')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
+        <div  onClick={() => assignActivePage('patients')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Patients</p>
         </div>
-        <div  onClick={() => assignActivePage('settings')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
+        <div  onClick={() => assignActivePage('settings')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Settings</p>
         </div>
-        <div  onClick={() => assignActivePage('help')} className=' p-2 bg-[#FAFDF9] w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
+        <div  onClick={() => assignActivePage('help')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px]'>Help</p>
         </div>
         <div onClick={() => logout()}>

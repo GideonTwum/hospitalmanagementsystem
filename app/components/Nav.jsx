@@ -5,7 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const Nav = () => {
   return (
-    <div className='flex h-[10vh] w-[80vw] bg-white items-center '>
+    <div className='flex h-[15vh] w-[80vw] bg-white items-center '>
         <div className='flex  items-center gap-[20rem]'> 
           <div className='border-[1px] rounded-[30px] w-[33vw] flex items-center '>
             <input type="text" placeholder='Search...' className='text-[13px] p-2 rounded-[30px] w-[30vw] outline-none border-none ' />
