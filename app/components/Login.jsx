@@ -3,10 +3,12 @@
 import { Button } from '@nextui-org/button';
 import Image from 'next/image';
 import React, { useState } from 'react'
+import { Toaster, toast } from 'react-hot-toast';
 
 const Login = () => {
   const toMainPage = () => {
     setIsLoading(true);
+    toast.success('Login Successful!!')
     setTimeout(() => {
         window.location.href = './main';
     }, 2000); 
@@ -62,7 +64,7 @@ const Login = () => {
               <p className='text-[dodgerblue] text-[13px] cursor-pointer'>Sign up</p>
             </div>
         </div>
-       
+       <Toaster />
     </div>
   )
 }

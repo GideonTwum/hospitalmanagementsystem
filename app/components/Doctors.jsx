@@ -4,6 +4,8 @@ import Cardio from './Cardio';
 import Otolaryngologist from './Otolaryngologist';
 import Optometrist from './Optometrist';
 import Dentist from './Dentist';
+import { Button } from '@nextui-org/button';
+import { Add } from '@mui/icons-material';
 
 const Doctors = () => {
   const [activePage, setActivePage] = useState('');
@@ -26,8 +28,11 @@ const Doctors = () => {
   return (
     <div>
        <div className='flex flex-col gap-[10px]'>
-        <div>
+        <div className='flex items-center gap-4 '>
           <h1 className='font-bold text-[30px]'>Our Medical Specialists</h1>
+          <div>
+            <Button size='sm' className='p-none text-[12px] text-white bg-[dodgerblue]'> <Add style={{fontSize:18, color:'white'}}/> Add Category</Button>
+          </div>
         </div>
         <div className='flex items-center gap-4'>
           <div className='shadow w-[10vw] flex items-center justify-center bg-white hover:bg-[dodgerblue] rounded-[15px] cursor-pointer hover:text-white p-2 ' onClick={() => assignActivePage('cardio')}>

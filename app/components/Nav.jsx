@@ -3,6 +3,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+//icons import
+import { AccountCircle,  MenuBook, NotificationImportant,  } from '@mui/icons-material';
 const Nav = () => {
   return (
     <div className='flex h-[15vh] w-[80vw] bg-white items-center '>
@@ -12,12 +14,15 @@ const Nav = () => {
             < SearchIcon  className='text-gray-300 cursor-pointer'/>
           </div>
           <div className='flex  items-center gap-3   ml-[1rem]'>
-            <NotificationsNoneIcon className='cursor-pointer'/>
+            {/* <NotificationsNoneIcon className='cursor-pointer'/> */}
+            <NotificationImportant style={{fontSize:18, color:'gray'}}/>
             <div className='flex items-center '>
             <p className='cursor-pointer'>Dr. Nana K</p>
-            <AccountCircleIcon className='cursor-pointer'/>
+            {/* <AccountCircle className='cursor-pointer'/> */}
+            <AccountCircle style={{fontSize:18, color:'gray'}}/>
             </div>
-            <KeyboardArrowDownIcon className='cursor-pointer' />
+            {/* <KeyboardArrowDownIcon className='cursor-pointer' /> */}
+            
           </div>
         </div>
     </div>
