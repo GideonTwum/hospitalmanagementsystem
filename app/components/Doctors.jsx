@@ -6,6 +6,7 @@ import Optometrist from './Optometrist';
 import Dentist from './Dentist';
 import { Button } from '@nextui-org/button';
 import { Add } from '@mui/icons-material';
+import { Modal, ModalBody, ModalContent, ModalHeader } from '@nextui-org/react';
 
 const Doctors = () => {
   const [activePage, setActivePage] = useState('');
@@ -27,13 +28,33 @@ const Doctors = () => {
           return <Cardio/>
     }
   }
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  }
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  }
+
   return (
     <div>
        <div className='flex flex-col gap-[10px]'>
         <div className='flex items-center gap-4 '>
           <h1 className='font-bold text-[30px]'>Our Medical Specialists</h1>
           <div>
-            <Button size='sm' className='p-none text-[12px] text-white bg-[dodgerblue]'> <Add style={{fontSize:18, color:'white'}}/> Add Category</Button>
+            <Button onClick={() => handleOpenModal()} size='sm' className='p-none text-[12px] text-white bg-[dodgerblue]'> <Add style={{fontSize:18, color:'white'}}/> Add Category</Button>
+            <Modal
+            open={openModal}
+            onClose={handleCloseModal}
+            >
+              <ModalHeader>
+                Add a Category
+              </ModalHeader>
+
+            </Modal>
           </div>
         </div>
         <div className='flex items-center gap-4'>

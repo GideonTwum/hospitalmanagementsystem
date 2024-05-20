@@ -5,6 +5,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 //icons import
 import { AccountCircle,  MenuBook, NotificationImportant, Settings,  } from '@mui/icons-material';
+import { Button } from '@nextui-org/button';
 const Nav = () => {
   return (
     <div className='flex h-[15vh] w-[80vw] bg-white items-center '>
@@ -22,6 +23,7 @@ const Nav = () => {
             <AccountCircle style={{fontSize:18, color:'gray'}}/>
             </div>
             {/* <KeyboardArrowDownIcon className='cursor-pointer' /> */}
+           
             <div className='ml-[1.5rem]'>
               <Settings style={{fontSize:18, color:'gray'}}/>
             </div>

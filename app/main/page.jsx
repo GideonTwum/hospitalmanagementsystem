@@ -16,7 +16,7 @@ import { Business, ExitToApp, HelpCenter, PeopleOutline, SettingsAccessibility }
 import { Button, Popover, PopoverContent, PopoverTrigger, Spacer } from '@nextui-org/react';
 import toast, { Toaster } from 'react-hot-toast';
 
-const page = () => {
+const page = ({toggleTheme, isDark}) => {
     const [activePage, setActivePage] = useState('');
     const assignActivePage = (getValue) => {
         setActivePage(getValue);
@@ -61,7 +61,7 @@ const page = () => {
     }
 
   return (
-    <div className='flex bg-[#F9FAFD]  '>
+    <div className='flex bg-[#F9FAFD]'>
          <div className='flex flex-col bg-white h-[100vh] w-[30vw] items-center gap-[1rem]  '>
       <div className=' mt-[1rem] flex items-center gap-2'>
         <div className='bg-[dodgerblue] w-[fit-content] rounded-[10px]  p-2'>

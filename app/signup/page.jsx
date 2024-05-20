@@ -1,12 +1,20 @@
 'use client'
 import { Image } from '@nextui-org/react'
-import React from 'react'
-import { Toaster } from 'react-hot-toast'
+import React, { useState } from 'react'
+import toast, { Toaster } from 'react-hot-toast'
 
 const page = () => {
-
+  const [isLoading, setIsLoading] = useState(false);
   const signup = () =>{
-    
+    setIsLoading(true)
+    toast.success('You are an Admin now!')
+    setTimeout(()=>{
+      window.location.href='/main';
+    },2000)
+  }
+
+  const toLoginPage = () => {
+    window.location.href = '/';
   }
 
   return (
@@ -38,12 +46,12 @@ const page = () => {
               </div>
             </form>
           <div > 
-             <button  className='bg-[dodgerblue] hover:bg-[#4482d4] mt-[20px] text-[13px] items-center flex justify-center p-[10px] w-[16vw] text-white rounded-[10px]'> Signup</button>
+             <button onClick={()=> signup()}  className='bg-[dodgerblue] hover:bg-[#4482d4] mt-[20px] text-[13px] items-center flex justify-center p-[10px] w-[16vw] text-white rounded-[10px]'>{isLoading? <img className='h-[3vh] ' src='/loading.gif' alt='loading' /> : 'signup'}</button>
           </div>
            
             <div className='flex gap-[5px]'>
               <p className='text-[13px]'>Already an admin?</p> 
-              <p className='text-[dodgerblue] text-[13px] cursor-pointer' >Login</p>
+              <p className='text-[dodgerblue] text-[13px] cursor-pointer' onClick={() => toLoginPage()} >Login</p>
             </div>
             
         </div>
