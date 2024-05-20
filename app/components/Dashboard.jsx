@@ -23,7 +23,7 @@ const Dashboard = () => {
        </div>
 
        <div>
-        <div className='h-[30vh] bg-white flex items-center justify-center mt-20'>
+        <div className='h-[30vh] bg-white shadow flex items-center justify-center mt-20'>
           <p>Chart</p>
         </div>
        </div>

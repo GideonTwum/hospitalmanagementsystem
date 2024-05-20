@@ -25,6 +25,10 @@ const Login = () => {
       }
     }
    
+    const signup = () =>{
+      window.location.href='/signup'
+    }
+
 
   return (
 
@@ -61,7 +65,7 @@ const Login = () => {
            
             <div className='flex gap-[5px]'>
               <p className='text-[13px]'>Are you a new Admin?</p> 
-              <p className='text-[dodgerblue] text-[13px] cursor-pointer'>Sign up</p>
+              <p className='text-[dodgerblue] text-[13px] cursor-pointer' onClick={()=> signup()}>Sign up</p>
             </div>
         </div>
        <Toaster />

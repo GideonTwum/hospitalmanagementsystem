@@ -33,6 +33,39 @@
   
 }
 
+.image{
+  animation: movingRight 2s alternate ease-in-out;
+}
+
+@keyframes movingRight{
+  from{
+    transform:translateX(-100px);
+  }
+  to{
+    transform:translateX(0px);
+  }
+}
+
+.forms{
+  animation: movingLeft 2s alternate ease-in-out;
+}
+
+@keyframes movingLeft{
+  from{
+    transform: translateX(100px);
+  }
+  to{
+    transform: translateX(-0px);
+  }
+}
+
+.sign{
+  background-image:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/hospiril.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .body{
   background-image:linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('/hospitalward.jpg');
   background-position: center;

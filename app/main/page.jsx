@@ -47,6 +47,8 @@ const page = () => {
                 return <Settings />
             case 'help':
                 return <Help />
+            default:
+              return <Dashboard />
         }
     }
 
@@ -86,13 +88,13 @@ const page = () => {
         <div  onClick={() => assignActivePage('patients')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px] flex items-center gap-2'><PeopleOutline style={{fontSize:18, color:'gray'}} /> Patients</p>
         </div>
-        <div  onClick={() => assignActivePage('settings')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
-          <p className='text-[13px] ml-[45px] flex items-center gap-2'> <SettingsAccessibility style={{fontSize:18, color:'gray'}} /> Settings</p>
-        </div>
+        {/* <div  onClick={() => assignActivePage('settings')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
+          <p className='text-[13px] ml-[45px] flex items-center gap-2'> <SettingsAccessibility style={{fontSize:18, color:'gray'}} /> </p>
+        </div> */}
         <div  onClick={() => assignActivePage('help')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px] flex items-center gap-2'> <HelpCenter style={{fontSize:18, color:'gray'}}/> Help</p>
         </div>
-        <div>
+        <div className='mt-24'>
           {/* <button className='bg-[dodgerblue] p-2 text-[12px] text-white w-[15vw] rounded-[7px]'> <ExitToApp style={{fontSize:18, color:'white'}}/> logout</button> */}
           <Popover 
             isOpen={visible}
@@ -102,7 +104,7 @@ const page = () => {
               <PopoverTrigger>
                 <Button size='md' auto onClick={()=> setVisible(true)} className='bg-[dodgerblue] text-[12px] text-white w-[15vw] rounded-7px '>
                 <ExitToApp style={{fontSize:18, color:'white'}}/>
-                  Login
+                  Logout
                 </Button>
               </PopoverTrigger>
               <PopoverContent className='w-[fit-content]' > 

@@ -23,6 +23,8 @@ const Doctors = () => {
         return <Optometrist />
       case 'dentist' :
         return <Dentist />
+        default:
+          return <Cardio/>
     }
   }
   return (
