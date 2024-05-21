@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
@@ -33,7 +34,7 @@ const Nav = () => {
                 </DropdownTrigger>
                 <DropdownMenu aria-label='Static Actions'>
                     <DropdownItem key='Profile' className='flex items-center outline-none'><AccountCircle className='text-gray-600'/> Profile </DropdownItem>
-                    <DropdownItem><Switch defaultSelected size='sm'> Light</Switch> </DropdownItem>
+                    <DropdownItem><Switch  size='sm'> Light</Switch> </DropdownItem>
                     <DropdownItem><Language className='text-gray-600'/> Language</DropdownItem>
                     <DropdownItem><Article className='text-gray-600'/> Terms of Use</DropdownItem>
                     <DropdownItem><Policy className='text-gray-600'/> Privacy Policy</DropdownItem>

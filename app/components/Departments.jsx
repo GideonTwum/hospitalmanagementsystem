@@ -1,3 +1,4 @@
+'use client'
 import { Add } from '@mui/icons-material'
 import { Button } from '@nextui-org/button'
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/react'

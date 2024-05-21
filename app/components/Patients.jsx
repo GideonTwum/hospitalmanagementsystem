@@ -1,3 +1,4 @@
+'use client'
 import { AccountCircleSharp } from '@mui/icons-material'
 import Search from '@mui/icons-material/Search'
 import React from 'react'
