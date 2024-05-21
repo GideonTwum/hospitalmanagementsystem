@@ -111,8 +111,8 @@ const page = ({toggleTheme, isDark}) => {
                 <p className='text-[12px]'>Are you sure?</p>
                 <Spacer y={0.5}/>
                 <div className='flex gap-2 '>
-                  <Button onClick={() => logout()} className='h-[20px] bg-white hover:bg-[dodgerblue] text-[10px]' size='small'>Yes</Button>
-                  <Button onClick={() => handleCancel()} className='h-[20px] bg-white hover:bg-[dodgerblue] text-[10px]' size='small'>No</Button>
+                  <Button onClick={() => logout()} className='h-[20px] bg-white hover:bg-[dodgerblue] hover:text-white text-[10px]' size='small'>Yes</Button>
+                  <Button onClick={() => handleCancel()} className='h-[20px] bg-white hover:bg-[dodgerblue] hover:text-white text-[10px]' size='small'>No</Button>
                 </div>
               </PopoverContent>
 

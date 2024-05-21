@@ -19,7 +19,7 @@ const page = () => {
 
   return (
     <div className='min-h-screen flex items-center justify-center sign'>
-        <div className='flex gap-[2rem]'>
+        <div className='flex items-center gap-[2rem]'>
             <div className='image'>
                 <Image 
                 width={300}
@@ -28,7 +28,7 @@ const page = () => {
                 alt='female doctor'
                 />
             </div>
-            <div className='bg-white p-10 rounded-[10px] shadow-lg flex flex-col gap-[12px] items-center forms'>
+            <div className='bg-white h-[70vh] p-10 rounded-[10px] shadow-lg flex flex-col gap-[12px] items-center forms'>
               <div className='flex flex-col items-center'>
                 <h1 className='text-[20px]  font-bold '>G_TEN HOSPITAL</h1>
                 <h1 className='text-[15px] text-[dodgerblue] font-bold '>ADMIN PORTAL</h1>

@@ -6,7 +6,8 @@ import Optometrist from './Optometrist';
 import Dentist from './Dentist';
 import { Button } from '@nextui-org/button';
 import { Add } from '@mui/icons-material';
-import { Modal, ModalBody, ModalContent, ModalHeader } from '@nextui-org/react';
+import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from '@nextui-org/react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Doctors = () => {
   const [activePage, setActivePage] = useState('');
@@ -29,15 +30,16 @@ const Doctors = () => {
     }
   }
 
-  const [openModal, setOpenModal] = useState(false);
-
-  const handleOpenModal = () => {
-    setOpenModal(true);
+  const {isOpen, onOpen, onOpenChange} = useDisclosure(); 
+  const [add, setAdd] = useState(false);
+  const added = () =>{
+    setAdd(true);
+    toast.success('Category Added Successfully!')
+    setTimeout(()=>{
+     
+    },1000)
   }
 
-  const handleCloseModal = () => {
-    setOpenModal(false);
-  }
 
   return (
     <div>
@@ -45,16 +47,31 @@ const Doctors = () => {
         <div className='flex items-center gap-4 '>
           <h1 className='font-bold text-[30px]'>Our Medical Specialists</h1>
           <div>
-            <Button onClick={() => handleOpenModal()} size='sm' className='p-none text-[12px] text-white bg-[dodgerblue]'> <Add style={{fontSize:18, color:'white'}}/> Add Category</Button>
-            <Modal
-            open={openModal}
-            onClose={handleCloseModal}
-            >
-              <ModalHeader>
-                Add a Category
-              </ModalHeader>
-
-            </Modal>
+            <Button onPress={onOpen}  size='sm' className='p-none text-[12px] text-white bg-[dodgerblue]'> <Add style={{fontSize:18, color:'white'}}/> Add Category</Button>
+              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                  <ModalContent>
+                    {(onClose)=> (
+                      <>
+                        <ModalHeader className='font-bold'> Add a Category</ModalHeader>
+                        <ModalBody>
+                          <div className='flex flex-col'>
+                            <label className='text-[13px]' htmlFor="">Enter Category name</label>
+                            <input type="text" className='outline-none w-[20vw] border-[1px]' />
+                          </div>
+                          <div className='flex flex-col'>
+                            <label className='text-[13px]' htmlFor="">what department?</label>
+                            <input type="text" className='outline-none w-[20vw] border-[1px]' />
+                          </div>
+                        </ModalBody>
+                        <ModalFooter>
+                          <div>
+                            <Button onClick={() => added() } onPress={onClose} className='text-white bg-[dodgerblue] mb-4 outline-none'>Add</Button>
+                          </div>
+                        </ModalFooter>
+                      </>
+                    )}
+                  </ModalContent>
+              </Modal>
           </div>
         </div>
         <div className='flex items-center gap-4'>
@@ -75,6 +92,7 @@ const Doctors = () => {
        <div className='p-10'>
             {renderPages()}
        </div>
+       <Toaster/>
     </div>
   )
 }
