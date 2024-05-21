@@ -4,8 +4,10 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 //icons import
-import { AccountCircle,  MenuBook, NotificationImportant, Settings,  } from '@mui/icons-material';
+import { AccountCircle,  Article,  ExitToApp,  FileCopy,  Language,  MenuBook, NotificationImportant, Policy, Settings, ToggleOff,  } from '@mui/icons-material';
 import { Button } from '@nextui-org/button';
+import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Switch } from '@nextui-org/react';
+import { ToggleButton } from '@mui/material';
 const Nav = () => {
   return (
     <div className='flex h-[15vh] w-[80vw] bg-white items-center '>
@@ -25,7 +27,20 @@ const Nav = () => {
             {/* <KeyboardArrowDownIcon className='cursor-pointer' /> */}
            
             <div className='ml-[1.5rem]'>
-              <Settings style={{fontSize:18, color:'gray'}}/>
+              <Dropdown>
+                <DropdownTrigger>
+                  <Settings variant='bordered' style={{fontSize:18, color:'gray'}}/>
+                </DropdownTrigger>
+                <DropdownMenu aria-label='Static Actions'>
+                    <DropdownItem key='Profile' className='flex items-center outline-none'><AccountCircle className='text-gray-600'/> Profile </DropdownItem>
+                    <DropdownItem><Switch defaultSelected size='sm'> Light</Switch> </DropdownItem>
+                    <DropdownItem><Language className='text-gray-600'/> Language</DropdownItem>
+                    <DropdownItem><Article className='text-gray-600'/> Terms of Use</DropdownItem>
+                    <DropdownItem><Policy className='text-gray-600'/> Privacy Policy</DropdownItem>
+                    <DropdownItem><FileCopy className='text-gray-600'/> Licenses</DropdownItem>
+                    <DropdownItem key='logout' className='flex items-center outline-none text-[13px]'><ExitToApp className='text-gray-600'/> Logout</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
             </div>
             
           </div>
