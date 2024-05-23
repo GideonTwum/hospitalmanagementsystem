@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "name": "Gideon",
+        "age": 24,
+        "condition": "headache"
+    },
+    {
+        "id": 2,
+        "name": "John",
+        "age": 34,
+        "condition": "Kidney failure"
+    },
+    {
+        "id": 3,
+        "name": "Akos",
+        "age": 14,
+        "condition": "Cholera"
+    },
+    {
+        "id": 4,
+        "name": "Martin",
+        "age": 47,
+        "condition": "Fever"
+    },
+    {
+        "id": 5,
+        "name": "Clarence",
+        "age": 68,
+        "condition": "Diabetes"
+    },
+    {
+        "id": 8,
+        "name": "Maxwell",
+        "age": 22,
+        "condition": "Fracture"
+    },
+    {
+        "id": 9,
+        "name": "Clinton",
+        "age": 57,
+        "condition": "backpain"
+    }
+
+]

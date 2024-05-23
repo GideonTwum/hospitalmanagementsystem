@@ -11,15 +11,15 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Switch } from '@
 import { ToggleButton } from '@mui/material';
 const Nav = () => {
   return (
-    <div className='flex h-[15vh] w-[80vw] bg-white items-center '>
+    <div className='flex h-[15vh] w-[80vw] bg-white items-center absolute right-0 fixed'>
         <div className='flex  items-center gap-[20rem]'> 
-          <div className='border-[1px] rounded-[30px] w-[33vw] flex items-center '>
+          <div className='border-[1px] rounded-[30px] w-[33vw] flex items-center ml-9'>
             <input type="text" placeholder='Search...' className='text-[13px] p-2 rounded-[30px] w-[30vw] outline-none border-none ' />
             < SearchIcon  className='text-gray-300 cursor-pointer'/>
           </div>
           <div className='flex  items-center gap-6  '>
             {/* <NotificationsNoneIcon className='cursor-pointer'/> */}
-            <NotificationImportant style={{fontSize:18, color:'gray'}}/>
+            <NotificationImportant className='cursor-pointer ' style={{fontSize:18, color:'gray'}}/>
             <div className='flex items-center '>
             <p className='cursor-pointer'>Dr. Nana K</p>
             {/* <AccountCircle className='cursor-pointer'/> */}
@@ -27,7 +27,7 @@ const Nav = () => {
             </div>
             {/* <KeyboardArrowDownIcon className='cursor-pointer' /> */}
            
-            <div className='ml-[1.5rem]'>
+            <div className='ml-[1.5rem] cursor-pointer'>
               <Dropdown>
                 <DropdownTrigger>
                   <Settings variant='bordered' style={{fontSize:18, color:'gray'}}/>

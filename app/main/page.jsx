@@ -62,14 +62,14 @@ const page = ({toggleTheme, isDark}) => {
 
   return (
     <div className='flex bg-[#F9FAFD]'>
-         <div className='flex flex-col bg-white h-[100vh] w-[30vw] items-center gap-[1rem]  '>
+      <div className='flex flex-col bg-white h-[100vh] w-[250px] items-center gap-[1rem] fixed'>
       <div className=' mt-[1rem] flex items-center gap-2'>
         <div className='bg-[dodgerblue] w-[fit-content] rounded-[10px]  p-2'>
           <h1 className='text-white font-bold'>H</h1>
         </div>
         <h1 className='font-bold'>HOSPITAL</h1>
       </div>
-      <div className='flex flex-col gap-[1.5rem] mt-10'>
+      <div className='flex flex-col gap-[1rem] mt-10'>
         <div onClick={() => assignActivePage('dashboard')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section  hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px] flex items-center gap-2'> <DashboardIcon style={{ fontSize:15, color:'gray'}}/> Dashboard</p>
         </div>
@@ -88,9 +88,9 @@ const page = ({toggleTheme, isDark}) => {
         <div  onClick={() => assignActivePage('patients')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px] flex items-center gap-2'><PeopleOutline style={{fontSize:18, color:'gray'}} /> Patients</p>
         </div>
-        {/* <div  onClick={() => assignActivePage('settings')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
+        <div  onClick={() => assignActivePage('settings')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px] flex items-center gap-2'> <SettingsAccessibility style={{fontSize:18, color:'gray'}} /> </p>
-        </div> */}
+        </div>
         <div  onClick={() => assignActivePage('help')} className=' p-2 bg-white w-[15vw] rounded-[7px] cursor-pointer hover:bg-blue-200 section hover:ml-[25px] '>
           <p className='text-[13px] ml-[45px] flex items-center gap-2'> <HelpCenter style={{fontSize:18, color:'gray'}}/> Help</p>
         </div>
@@ -124,9 +124,9 @@ const page = ({toggleTheme, isDark}) => {
 
    
 
-    <div className='flex flex-col'>
+    <div className='flex flex-col ml-[18rem]'>
         <Nav />
-        <div className='p-8'>
+        <div className='p-8 pt-[8rem]' >
             {renderPages()}
         </div>
     </div>
