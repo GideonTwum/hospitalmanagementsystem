@@ -4,14 +4,57 @@ import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 
 const page = () => {
+  const [email, setemail] = useState("")
+  const [password, setPassword] = useState("")
+  const [name, setName] = useState("")
+
   const [isLoading, setIsLoading] = useState(false);
-  const signup = () =>{
+
+  // handle sign up
+  const signup = async () =>{
+    if(!name || !email || !password) {
+     return toast.error("All fields are required")
+    }
+    try {
     setIsLoading(true)
-    toast.success('You are an Admin now!')
-    setTimeout(()=>{
-      window.location.href='/main';
-    },2000)
+        const myHeaders = new Headers();
+         myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+      "name": name,
+      "email": email,
+      "password": password
+    });
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+
+    await fetch("http://localhost:1000/api/v1/admins/create", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        if(result.msg === "Sign up successful"){
+          setIsLoading(true)
+          toast.success(result.msg)
+        console.log(result.msg)
+        setIsLoading(false)
+        }else{
+          toast.error(result.msg)
+          setIsLoading(false)
+        }
+      })
+      .catch((error) => console.error(error));
+  } catch (err) {
+    console.log(err);
+  }  
   }
+
+  console.log(email);
+  console.log(password);
+  console.log(name);
 
   const toLoginPage = () => {
     window.location.href = '/';
@@ -38,11 +81,17 @@ const page = () => {
             
               <div className='flex flex-col gap-[5px]'>
                 <label htmlFor="" className='text-[13px]'>Username</label>
-                <input className='text-[13px] p-[10px] border-dashed outline-none bg-[transparent] w-[16vw] border-[#ccc] border-[2px] rounded-[10px]' type="text" placeholder='Enter your username' />
+                <input onChange={(e) => setName(e.target.value)} className='text-[13px] p-[10px] border-dashed outline-none bg-[transparent] w-[16vw] border-[#ccc] border-[2px] rounded-[10px]' type="text" placeholder='Enter your username' />
               </div>
+
+              <div className='flex flex-col gap-[5px]'>
+                <label htmlFor="" className='text-[13px]'>Email</label>
+                <input onChange={(e) => setemail(e.target.value)} className='text-[13px] p-[10px] border-dashed outline-none bg-[transparent] w-[16vw] border-[#ccc] border-[2px] rounded-[10px]' type="text" placeholder='Enter your email' />
+              </div>
+
               <div className='flex flex-col gap-[5px]'>
                 <label htmlFor="" className='text-[13px]'>Password</label>
-                <input className='text-[13px] p-[10px] border-dashed outline-none bg-[transparent] w-[16vw] border-[#ccc] border-[2px] rounded-[10px]' type="password" placeholder='Enter your password' />
+                <input onChange={(e) => setPassword(e.target.value)} className='text-[13px] p-[10px] border-dashed outline-none bg-[transparent] w-[16vw] border-[#ccc] border-[2px] rounded-[10px]' type="password" placeholder='Enter your password' />
               </div>
             </form>
           <div > 
